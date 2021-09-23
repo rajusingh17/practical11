@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>practical - 11</title>
+    <link
+    rel="stylesheet"href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+     />
+    <style>
+   
+   * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .main-content {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+        color: rgb(209, 20, 20);
+      }
+      footer {
+        width: 100%;
+        background-color: #0f1013;
+      }
+      .sec-1 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 30px 10px;
+      }
+      .about {
+        width: 40%;
+      }
+      .sec-1 h2 {
+        font-size: 18px;
+        color: rgb(241, 11, 11);
+        text-transform: uppercase;
+      }
+      .about p {
+        text-align: justify;
+        color: rgb(131, 122, 122);
+        line-height: 24px;
+        margin-top: 10px;
+      }
+      .sec-1 ul {
+        list-style: none;
+      }
+      .sec-1 ul li {
+        padding: 5px;
+      }
+      a {
+        text-decoration: none;
+        color: gray;
+      }
+      a:hover {
+        color: rgb(0, 132, 255);
+      }
+      span {
+        color: rgb(126, 123, 123);
+      }
+      i {
+        color: rgb(226, 12, 12);
+        font-size: 20px;
+        margin-right: 10px;
+      }
+      .sec-2 {
+        display: flex;
+        justify-content: center;
+        padding: 20px 10px;
+        align-items: center;
+      }
+      .sec-2 p {
+        color: rgb(110, 81, 81);
+        font-size: 24px;
+        padding: 0;
+      }
+      .sec-2 a {
+        display: inline-block;
+        padding: 10px 25px;
+        color: rgb(207, 22, 22);
+        background-color: rgb(43, 255, 0);
+        margin-left: 10px;
+        border-radius: 20px;
+        font-size: 22px;
+      }
+      .sec-2 a:hover {
+        background-color: rgb(233, 153, 5);
+      }
+      .sec-3 {
+        display: flex;
+        justify-content: center;
+        padding: 20px 10px;
+      }
+      .sec-3 ul {
+        list-style: none;
+      }
+      .sec-3 ul li {
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        padding: 20px;
+        background-color: #2713e2;
+        border-radius: 50%;
+        margin-right: 20px;
+      }
+      .sec-3 ul li i {
+        color: rgb(22, 19, 19);
+        font-size: 24px;
+        line-height: 20px;
+        text-align: center;
+      }
+      .sec-3 ul li:nth-child(1):hover {
+        background-color: #eb0d0d;
+      }
+      .sec-3 ul li:nth-child(2):hover {
+        background-color: #386e97;
+      }
+      .sec-3 ul li:nth-child(3):hover {
+        background-color: #f5290a;
+      }
+      .sec-3 ul li:nth-child(4):hover {
+        background-color: #2d5368;
+      }
+      .sec-4 {
+        display: flex;
+        background-color: black;
+        justify-content: center;
+        padding: 30px;
+      }
+      .sec-4 p {
+        color: rgb(248, 239, 239);
+        position: relative;
+      }
+      
+      .sec-4 p::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background-color: rgb(255, 0, 149);
+        position: absolute;
+        right: 0;
+        bottom: -10px;
+        transition: all 0.3s;
+      }
+      .sec-4 p:hover::after {
+        width: 100%;
+      }
+      
+      hr {
+        opacity: 0.2;
+      }
+      
+      @media (max-width: 767px) {
+        .main-content {
+          width: 100%;
+          height: 100px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 40px;
+          color: grey;
+        }
+        footer {
+          width: 100%;
+          background-color: #171c30;
+        }
+        .sec-1 {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          padding: 30px 10px;
+        }
+        .about {
+          width: 100%;
+          margin-bottom: 20px;
+        }
+        .sec-1 h2 {
+          font-size: 18px;
+          color: rgb(226, 197, 197);
+          text-transform: uppercase;
+        }
+        .about p {
+          text-align: justify;
+          color: grey;
+          line-height: 24px;
+          margin-top: 10px;
+        }
+        .sec-1 ul {
+          list-style: none;
+        }
+        .sec-1 ul li {
+          padding: 5px;
+        }
+        a {
+          text-decoration: none;
+          color: gray;
+        }
+        a:hover {
+          color: rgb(255, 0, 255);
+        }
+        span {
+          color: grey;
+        }
+        i {
+          color: rgb(146, 39, 39);
+          font-size: 20px;
+          margin-right: 10px;
+        }
+        .sec-2 {
+          display: flex;
+          justify-content: center;
+          padding: 20px;
+          align-items: center;
+        }
+        .sec-2 p {
+          color: rgb(46, 17, 17);
+          font-size: 24px;
+          padding: 0;
+        }
+        .sec-2 a {
+          display: inline-block;
+          padding: 10px 25px;
+          color: white;
+          background-color: rgb(60, 255, 0);
+          margin-left: 10px;
+          border-radius: 20px;
+          font-size: 22px;
+        }
+        .sec-2 a:hover {
+          background-color: rgb(94, 255, 0);
+        }
+        .sec-3 {
+          display: flex;
+          justify-content: center;
+          padding: 20px;
+        }
+        .sec-3 ul {
+          list-style: none;
+          margin: 20px;
+        }
+        .sec-3 ul li {
+          display: inline-block;
+          width: 60px;
+          height: 60px;
+          padding: 20px;
+          background-color: #523939;
+          border-radius: 50%;
+          margin-right: 20px;
+        }
+        .sec-3 ul li i {
+          color: white;
+          font-size: 24px;
+          line-height: 20px;
+          text-align: center;
+        }
+        .sec-3 ul li:nth-child(1):hover {
+          background-color: #ee290f;
+        }
+        .sec-3 ul li:nth-child(2):hover {
+          background-color: #0e9df0;
+        }
+        .sec-3 ul li:nth-child(3):hover {
+          background-color: #f0220b;
+        }
+        .sec-3 ul li:nth-child(4):hover {
+          background-color: #0da2f1;
+        }
+        .sec-4 {
+          display: flex;
+          background-color: black;
+          justify-content: center;
+          padding: 30px;
+        }
+        .sec-4 p {
+          color: grey;
+          position: relative;
+        }
+      
+        .sec-4 p::after {
+          content: '';
+          display: block;
+          width: 0;
+          height: 2px;
+          background-color: rgb(0, 255, 0);
+          position: absolute;
+          right: 0;
+          bottom: -10px;
+          transition: all 0.3s;
+        }
+        .sec-4 p:hover::after {
+          width: 100%;
+        }
+        hr {
+          opacity: 0.2;
+        }
+      }
+      
+      @media (max-width: 499px) {
+        .main-content {
+          width: 100%;
+          height: 100px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 40px;
+          color: grey;
+        }
+        footer {
+          width: 100%;
+          background-color: #676f8b;
+        }
+        .sec-1 {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          padding: 30px 10px;
+        }
+        .about {
+          width: 100%;
+        }
+        .sec-1 h2 {
+          font-size: 18px;
+          color: white;
+          text-transform: uppercase;
+          margin-top: 20px;
+        }
+        .about p {
+          text-align: justify;
+          color: grey;
+          line-height: 24px;
+          margin-top: 10px;
+        }
+        .sec-1 ul {
+          list-style: none;
+        }
+        .sec-1 ul li {
+          padding: 5px;
+        }
+        a {
+          text-decoration: none;
+          color: gray;
+        }
+        a:hover {
+          color: rgb(0, 255, 200);
+        }
+        span {
+          color: grey;
+        }
+        i {
+          color: rgb(156, 18, 18);
+          font-size: 20px;
+          margin-right: 10px;
+        }
+        .sec-2 {
+          display: flex;
+          justify-content: center;
+          padding: 20px;
+          align-items: center;
+        }
+        .sec-2 p {
+          color: gray;
+          font-size: 24px;
+          padding: 0;
+        }
+        .sec-2 a {
+          display: inline-block;
+          padding: 10px 25px;
+          color: white;
+          background-color: rgb(255, 0, 128);
+          margin-left: 10px;
+          border-radius: 20px;
+          font-size: 22px;
+        }
+        .sec-2 a:hover {
+          background-color: rgb(60, 255, 0);
+        }
+        .sec-3 {
+          display: flex;
+          justify-content: center;
+          padding: 20px;
+        }
+        .sec-3 ul {
+          list-style: none;
+          
+        }
+        .sec-3 ul li {
+          display: inline-block;
+          width: 40px;
+          height: 40px;
+          padding: 10px;
+          background-color: #424242;
+          border-radius: 50%;
+          margin-right: 10px;
+        }
+        .sec-3 ul li i {
+          color: white;
+          font-size: 24px;
+          line-height: 20px;
+          text-align: center;
+        }
+        .sec-3 ul li:nth-child(1):hover {
+          background-color: #3b9972;
+        }
+        .sec-3 ul li:nth-child(2):hover {
+          background-color: #0e1a24;
+        }
+        .sec-3 ul li:nth-child(3):hover {
+          background-color: #ddccca;
+        }
+        .sec-3 ul li:nth-child(4):hover {
+          background-color: #092230;
+        }
+        .sec-4 {
+          display: flex;
+          background-color: black;
+          justify-content: center;
+          padding: 30px;
+        }
+        .sec-4 p {
+          color: grey;
+          position: relative;
+        }
+      
+        .sec-4 p::after {
+          content: '';
+          display: block;
+          width: 0;
+          height: 2px;
+          background-color: rgb(212, 212, 97);
+          position: absolute;
+          right: 0;
+          bottom: -10px;
+          transition: all 0.3s;
+        }
+        .sec-4 p:hover::after {
+          width: 100%;
+        }
+        hr {
+          opacity: 0.2;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <section class="main-content">Content Area</section>
+    <footer>
+      <section class="sec-1">
+        <section class="about">
+          <h2>About</h2>
+          <p>
+            The HyperText Markup Language, or HTML is the standard 
+            markup language for documents designed to be displayed 
+            in a web browser.HTML describes the structure of a web 
+            page semantically and originally included cues for the 
+            appearance of the document. HTML elements are the building 
+            blocks of HTML pages.
+          </p>
+        </section>
+        <section class="link1">
+          <h2>Categories</h2>
+          <ul>
+            <li><a href="#">C</a></li>
+            <li><a href="#">C++</a></li>
+            <li><a href="#">Python</a></li>
+            <li><a href="#">Java</a></li>
+          </ul>
+        </section>
+        <section class="link2">
+          <h2>Quick Links</h2>
+          <ul>
+            <li><a href="#">Disclaimer</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">Contribute</a></li>
+          </ul>
+        </section>
+        <section class="link3">
+          <h2>Contact Us</h2>
+          <ul>
+            <li>
+              <i class="fa fa-home"></i> <span>Varanasi</span>
+            </li>
+            <li>
+              <i class="fa fa-envelope"></i>
+              <span>abc@gmail.com</span>
+            </li>
+            <li>
+              <i class="fa fa-phone-square"></i>
+              <span>Mobile: 9999999999</span>
+            </li>
+          </ul>
+        </section>
+      </section>
+      <section class="sec-2">
+        <p>REGISTER FOR FREE</p>
+        <a href="#">SIGNUP!</a>
+      </section>
+      <section class="sec-3">
+        <ul>
+          <li>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-google"></i></a>
+          </li>
+          <li>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+          </li>
+        </ul>
+      </section>
+      <section class="sec-4">
+        <p>
+          Jai GLA
+        </p>
+      </section>
+    </footer>
+  </body>
+</html>
